@@ -1,13 +1,13 @@
 .. image:: media/qgisstepsbar.png
     :alt: QGIS Steps Bar
-    :width: 50%
+    :width: 60%
     :align: center
 
 ==============
 QGIS Steps Bar
 ==============
 QGIS Steps Bar is a QWidget. It depends on the QT library on your machine that compiles QGIS.
-It requires QGIS3 or above.
+It requires QGIS 3.4 or above.
 
 Usage
 =====
@@ -43,6 +43,11 @@ The following code shows how to add the QGIS Steps Bar into layout:
 
     dialog = MainDialog()
     dialog.show()
+
+.. image:: media/qgisstepsbar.png
+    :alt: QGIS Steps Bar
+    :width: 60%
+    :align: center
 
 The following code shows how to control the QGIS Steps Bar:
 
@@ -81,7 +86,7 @@ The following code shows how to control the QGIS Steps Bar:
 
 .. image:: media/control.png
     :alt: Control
-    :width: 50%
+    :width: 60%
     :align: center
 
 Development
