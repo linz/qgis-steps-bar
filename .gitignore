@@ -6,3 +6,5 @@ __pycache__/
 
 # Dist
 qgisstepsbar/dist/
+
+*.egg-info/
