@@ -41,7 +41,7 @@ The following code shows how to add the QGIS Steps Bar into layout:
             self.stepsbar = QgisStepsBar(["Step1", "Step 2", "Step 3", "Step 4"])
             self.layout.addWidget(self.stepsbar)
 
-    dialog = MainDialog()
+    dialog = Dialog()
     dialog.show()
 
 .. image:: media/qgisstepsbar.png
@@ -81,7 +81,7 @@ The following code shows how to control the QGIS Steps Bar:
             self.next_button = NextButton(self.stepsbar)
             self.layout.addWidget(self.next_button)
 
-    dialog = MainDialog()
+    dialog = Dialog()
     dialog.show()
 
 .. image:: media/control.png
