@@ -14,7 +14,8 @@ class QgisStepsBar(QWidget):
         self.bar_height = 15
         self.dot_width = 20
         self._build_ui()
-        self.update(0)
+        self.current_index = 0
+        self._update()
 
     def _build_ui(self):
         self.layout_main = QVBoxLayout()
@@ -62,9 +63,9 @@ class QgisStepsBar(QWidget):
             self.layout_labels.addWidget(label)
             self.widgets[i].append(label)
 
-    def update(self, index):
+    def _update(self):
         for key in self.widgets:
-            if key <= index:
+            if key <= self.current_index:
                 color = "#00AC94"  # greenish
             else:
                 color = "#B7A99A"  # greyish
@@ -73,3 +74,13 @@ class QgisStepsBar(QWidget):
                     widget.setStyleSheet("font-size:{}pt; color:{};".format(widget.font_size, color))
                 except AttributeError:
                     widget.setStyleSheet("color:{};".format(color))
+
+    def increment(self):
+        if self.current_index != len(self.steps) - 1:
+            self.current_index += 1
+            self._update()
+
+    def decrement(self):
+        if self.current_index != 0:
+            self.current_index -= 1
+            self._update()
