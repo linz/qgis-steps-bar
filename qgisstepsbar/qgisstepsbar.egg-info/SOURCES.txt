@@ -1,6 +1,0 @@
-README.rst
-qgisstepsbar/__init__.py
-qgisstepsbar.egg-info/PKG-INFO
-qgisstepsbar.egg-info/SOURCES.txt
-qgisstepsbar.egg-info/dependency_links.txt
-qgisstepsbar.egg-info/top_level.txt
