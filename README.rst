@@ -19,7 +19,7 @@ Installation
 
 Import
 ------
-.. code-block:: shell
+.. code-block:: python
 
     from qgisstepsbar import QgisStepsBar
 
@@ -27,7 +27,7 @@ Sample Code
 -----------
 The following code shows how to add the QGIS Steps Bar into layout:
 
-.. code-block:: shell
+.. code-block:: python
 
     from qgisstepsbar import QgisStepsBar
     from qgis.PyQt.QtWidgets import QDialog, QVBoxLayout
@@ -51,7 +51,7 @@ The following code shows how to add the QGIS Steps Bar into layout:
 
 The following code shows how to control the QGIS Steps Bar:
 
-.. code-block:: shell
+.. code-block:: python
 
     from qgisstepsbar import QgisStepsBar
     from qgis.PyQt.QtWidgets import QDialog, QVBoxLayout, QPushButton
