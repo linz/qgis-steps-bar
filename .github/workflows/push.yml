@@ -20,4 +20,4 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Commit Lint
         run: |
-          gitlint --commits origin/master..
+          gitlint
