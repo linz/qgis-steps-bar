@@ -1,7 +1,7 @@
 __version__ = "0.1.0"
 
 from qgis.PyQt.QtCore import Qt
-from qgis.PyQt.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QFrame, QSizePolicy, QSpacerItem
+from qgis.PyQt.QtWidgets import QFrame, QHBoxLayout, QLabel, QSizePolicy, QSpacerItem, QVBoxLayout, QWidget
 
 
 class QgisStepsBar(QWidget):
@@ -53,7 +53,12 @@ class QgisStepsBar(QWidget):
     def _create_labels(self):
         for i in range(len(self.steps)):
             if i != 0:
-                spacer = QSpacerItem(self.label_spacing_width, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                spacer = QSpacerItem(
+                    self.label_spacing_width,
+                    0,
+                    QSizePolicy.Expanding,
+                    QSizePolicy.Minimum,
+                )
                 self.layout_labels.addItem(spacer)
             label = QLabel(self.steps[i])
             label.font_size = 11

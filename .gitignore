@@ -1,10 +1,7 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-*.pyc 
-
-# Dist
-qgisstepsbar/dist/
-
-*.egg-info/
+__pycache__
+.pytest_cache
+*.pyc
+.venv
+.vscode
+Thumbs.db
+dist
