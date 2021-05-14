@@ -75,39 +75,21 @@ python3 -m venv .venv
 . .venv/bin/activate
 ```
 
-Upgrade pip and install the required dependencies.
+Install the required dependencies.
 
 ```bash
-pip install --upgrade pip
-pip install -r requirements-dev.txt
-```
-
-Install commit-msg git hook. It runs on every local commit to check if the commit message conforms to the convention specified in `.gitlint`
-
-```bash
-pre-commit install --hook-type commit-msg
-```
-
-Install Poetry. Peotry is a Python project management tool. QGIS Steps Bar uses Peotry to deploy packages to PyPI.
-To install:
-
-```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-poetry env use .venv/bin/python3
+poetry install
 ```
 
 ### Deployment
-The following command builds the source and wheels archives:
+You will have to add your own pypi token in this repo as a secret called `PYPI_TOKEN`
+
+Run the following command and push the new branch to publish this package to pypi:
 
 ```bash
-poetry build
+sh version.bump.sh
 ```
 
-This command publishes the package, previously built with the build command, to PyPI
-
-```bash
-poetry publish
-```
 
 ### Versioning
 Different verisons can be found at PyPI: https://pypi.org/project/qgisstepsbar/
